@@ -51,7 +51,7 @@ final class ViewModel : ObservableObject{
                 
         for delay in policy{
             try? await Task.sleep(nanoseconds: delay)
-                        // do something
+            // do something
         }
     }
 }
