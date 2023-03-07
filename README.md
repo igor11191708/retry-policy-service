@@ -6,8 +6,11 @@ The service creates sequence of the delays (nanoseconds) according to chosen str
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FThe-Igor%2Fretry-policy-service%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/The-Igor/retry-policy-service)
 
 There are two strategies
-- constant - constant delay between retries
-- exponential - Exponential backoff is a strategy in which you increase the delays between retries
+
+| type | description |
+| --- | --- |
+| constant | The strategy implements constant backoff  |
+| exponential [default] | Exponential backoff is a strategy in which you increase the delays between retries  |
 
 ```swift
         /// Constant delay between retries
