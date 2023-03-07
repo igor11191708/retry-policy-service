@@ -1,7 +1,5 @@
 # Retry service provides policy for how often some operation should happen with the timeout limit
 
-## API
-
 There are two strategies
 - constant - constant delay between retries
 - exponential - Exponential backoff is a strategy in which you increase the delays between retries
