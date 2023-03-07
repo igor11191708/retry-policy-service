@@ -1,4 +1,4 @@
-# Retry service provides policy for how often some operation should happen with the timeout limit
+# Retry service provides policy for how often some operation should happen with the timeout limit and delay between events
 
 The service creates sequence of the delays (nanoseconds) according to chosen strategy 
 
