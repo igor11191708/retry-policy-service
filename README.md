@@ -22,6 +22,10 @@ There are two strategies
 
 ```
 
+## Packages using the package
+
+[Async http client](https://github.com/The-Igor/async-http-client)
+
 ## How to use
 
 ```swift
@@ -70,9 +74,6 @@ struct ContentView: View {
 }
 ```
 
-## Packages using the package
-
-[Async http client](https://github.com/The-Igor/async-http-client)
 
 ## SwiftUI example for the package
 
