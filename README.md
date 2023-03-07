@@ -17,7 +17,7 @@ There are two strategies
         /// Exponential backoff is a strategy in which you increase the delays between retries.
         case exponential(
             retry : UInt = 3,
-            multiplier: Double = 2.0,
+            multiplier: Double = 2.0, // The power exponent
             duration: DispatchTimeInterval = .seconds(2),
             timeout: DispatchTimeInterval = .seconds(Int.max)
         )
