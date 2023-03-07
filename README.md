@@ -5,14 +5,14 @@ There are two strategies
 - exponential - Exponential backoff is a strategy in which you increase the delays between retries
 
 ```swift
-        /// constant delay between retries
+        /// Constant delay between retries
         case constant(
             retry : UInt = 5,
             duration: DispatchTimeInterval = .seconds(2),
             timeout: DispatchTimeInterval = .seconds(Int.max)
         )
         
-        /// Exponential backoff is a strategy in which you increase the delays between retries.
+        /// Exponential backoff is a strategy in which you increase the delays between retries
         case exponential(
             retry : UInt = 3,
             multiplier: Double = 2.0, // The power exponent
