@@ -13,16 +13,16 @@ There are two strategies
         /// Constant delay between retries
         case constant(
             retry : UInt = 5,
-            duration: DispatchTimeInterval = .seconds(2),
-            timeout: DispatchTimeInterval = .seconds(Int.max)
+            duration: DispatchTimeInterval,
+            timeout: DispatchTimeInterval 
         )
         
         /// Exponential backoff is a strategy in which you increase the delays between retries
         case exponential(
             retry : UInt = 3,
             multiplier: Double = 2.0, // power exponent
-            duration: DispatchTimeInterval = .seconds(2),
-            timeout: DispatchTimeInterval = .seconds(Int.max)
+            duration: DispatchTimeInterval,
+            timeout: DispatchTimeInterval 
         )
 
 ```
