@@ -1,6 +1,6 @@
 # Retry service provides policy for how often some operation should happen with the timeout limit
 
-The service creates sequence of the delays (nanoseconds) according to chosen policy 
+The service creates sequence of the delays (nanoseconds) according to chosen strategy 
 
 There are two strategies
 - constant - constant delay between retries
