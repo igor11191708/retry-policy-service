@@ -24,6 +24,54 @@ There are two strategies
 
 ```
 
+## How to use
+
+```swift
+final class ViewModel : ObservableObject{
+    
+    func constant() async {
+        let policy = RetryService(strategy: .constant())
+        for delay in policy{
+            try? await Task.sleep(nanoseconds: delay)
+            // do something
+        }
+    }
+    
+    func exponential() async {
+        let policy = RetryService(
+                strategy: .exponential(
+                retry: 5, 
+                multiplier: 2, 
+                duration: .seconds(1), 
+                timeout: .seconds(5)
+               )
+             )
+                
+        for delay in policy{
+            try? await Task.sleep(nanoseconds: delay)
+                        // do something
+        }
+    }
+}
+
+struct ContentView: View {
+    
+    @StateObject var model = ViewModel()
+    
+    var body: some View {
+        VStack {
+            Button("constatnt") { Task { await model.constant() } }
+            Button("exponential") { Task { await model.exponential() } }
+        }
+        .padding()
+        .task {
+            await model.exponential()
+        }
+        
+    }
+}
+```
+
 ## Packages using the package
 
 [Async http client](https://github.com/The-Igor/async-http-client)
