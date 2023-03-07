@@ -30,4 +30,4 @@ There are two strategies
 
 ## SwiftUI example for the package
 
-[Async http client example](https://github.com/The-Igor/retry-policy-service-example)
+[example for retry service](https://github.com/The-Igor/retry-policy-service-example)
