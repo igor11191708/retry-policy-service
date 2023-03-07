@@ -86,3 +86,9 @@ struct ContentView: View {
 ## SwiftUI example for the package
 
 [example for retry service](https://github.com/The-Igor/retry-policy-service-example)
+
+## TODO:
+
+Exponential backoff with jitter. Jitter adds some amount of randomness to the backoff to spread the retries around in time.
+For more information [Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
+
