@@ -13,25 +13,19 @@ extension DispatchTimeInterval {
     /// Convert to Double
     /// - Returns: Converted value
     func toDouble() -> Double? {
-        
-        let result: Double?
-
         switch self {
         case .seconds(let value):
-            result = Double(value)
+            return Double(value)
         case .milliseconds(let value):
-            result = Double(value)*0.001
+            return Double(value) / 1000.0
         case .microseconds(let value):
-            result = Double(value)*0.000001
+            return Double(value) / 1_000_000.0
         case .nanoseconds(let value):
-            result = Double(value)*0.000000001
-
+            return Double(value) / 1_000_000_000.0
         case .never:
-            result = nil
+            return nil
         @unknown default:
-            result = nil
+            return nil
         }
-
-        return result
     }
 }
