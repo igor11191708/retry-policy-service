@@ -7,7 +7,9 @@
 
 import Foundation
 
-@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+import Foundation
+
+// DispatchTimeInterval Extension for toDouble method
 extension DispatchTimeInterval {
     
     /// Convert to Double
@@ -26,6 +28,25 @@ extension DispatchTimeInterval {
             return nil
         @unknown default:
             return nil
+        }
+    }
+}
+
+extension DispatchTimeInterval {
+    func toDispatchTimeInterval() -> DispatchTimeInterval {
+        switch self {
+        case .seconds(let value):
+            return .seconds(value)
+        case .milliseconds(let value):
+            return .milliseconds(value)
+        case .microseconds(let value):
+            return .microseconds(value)
+        case .nanoseconds(let value):
+            return .nanoseconds(value)
+        case .never:
+            return .never
+        @unknown default:
+            return .never
         }
     }
 }
